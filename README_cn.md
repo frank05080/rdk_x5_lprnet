@@ -75,16 +75,16 @@ echo 1200000000 > /sys/kernel/debug/clk/bpu_mclk_2x_clk/clk_rate
 
 我们使用 hrt_model_exec 工具进行模型性能测试：
 
-`plain text hrt_model_exec perf --model_file lpr.bin --thread_num 1`
+`hrt_model_exec perf --model_file lpr.bin --thread_num 1`
 
 通过参数 thread_num 调整线程数量，得到不同的结果：
 
-  线程数   总帧数   总延时 (ms)   平均延时 (ms)   FPS
-  -------- -------- ------------- --------------- ---------
-  1        200      745.53        3.72            267.61
-  2        200      771.41        3.85            516.33
-  4        200      814.83        4.07            971.23
-  8        200      1112.61       5.56            1403.01
+| Number of threads | Total frame number | Total Delay (ms) | Average Delay (ms)  | FPS     |
+| ----------------- | ------------------ | ---------------- | ------------------- | ------- |
+| 1                 | 200                | 745.53           | 3.72                | 267.61  |
+| 2                 | 200                | 771.41           | 3.85                | 516.33  |
+| 4                 | 200                | 814.83           | 4.07                | 971.23  |
+| 8                 | 200                | 1112.61          | 5.56                | 1403.01 |
 
 ## 3.2 模型上板精度
 
